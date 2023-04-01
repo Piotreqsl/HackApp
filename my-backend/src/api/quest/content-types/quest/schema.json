@@ -4,7 +4,8 @@
   "info": {
     "singularName": "quest",
     "pluralName": "quests",
-    "displayName": "Quest"
+    "displayName": "Quest",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -21,20 +22,24 @@
       "type": "integer"
     },
     "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "quest_points": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::quest-point.quest-point",
       "mappedBy": "quest"
+    },
+    "IsActive": {
+      "type": "boolean"
     }
   }
 }
