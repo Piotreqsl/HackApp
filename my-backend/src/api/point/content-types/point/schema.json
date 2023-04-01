@@ -57,6 +57,9 @@
         "Mound",
         "Lake"
       ]
+    },
+    "Description": {
+      "type": "string"
     }
   }
 }
