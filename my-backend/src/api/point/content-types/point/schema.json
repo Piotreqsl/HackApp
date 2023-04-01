@@ -4,7 +4,8 @@
   "info": {
     "singularName": "point",
     "pluralName": "points",
-    "displayName": "Point"
+    "displayName": "Point",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -24,14 +25,15 @@
       "type": "string"
     },
     "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "point_discoveries": {
       "type": "relation",
@@ -44,6 +46,17 @@
       "relation": "oneToMany",
       "target": "api::quest-point.quest-point",
       "mappedBy": "point"
+    },
+    "Type": {
+      "type": "enumeration",
+      "enum": [
+        "Church",
+        "Park",
+        "Statue",
+        "Building",
+        "Mound",
+        "Lake"
+      ]
     }
   }
 }
