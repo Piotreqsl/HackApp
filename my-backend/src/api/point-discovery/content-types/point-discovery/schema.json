@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "point_discoveries",
+  "info": {
+    "singularName": "point-discovery",
+    "pluralName": "point-discoveries",
+    "displayName": "PointDiscovery"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "person": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::person.person",
+      "inversedBy": "point_discoveries"
+    },
+    "point": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::point.point",
+      "inversedBy": "point_discoveries"
+    }
+  }
+}

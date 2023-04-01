@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "quest_points",
+  "info": {
+    "singularName": "quest-point",
+    "pluralName": "quest-points",
+    "displayName": "QuestPoint"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "quest": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::quest.quest",
+      "inversedBy": "quest_points"
+    },
+    "point": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::point.point",
+      "inversedBy": "quest_points"
+    },
+    "Order": {
+      "type": "integer"
+    }
+  }
+}

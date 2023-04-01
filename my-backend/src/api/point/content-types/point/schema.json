@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "points",
+  "info": {
+    "singularName": "point",
+    "pluralName": "points",
+    "displayName": "Point"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Long": {
+      "type": "float"
+    },
+    "Lat": {
+      "type": "float"
+    },
+    "PointID": {
+      "type": "uid"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "point_discoveries": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::point-discovery.point-discovery",
+      "mappedBy": "point"
+    },
+    "quest_points": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::quest-point.quest-point",
+      "mappedBy": "point"
+    }
+  }
+}

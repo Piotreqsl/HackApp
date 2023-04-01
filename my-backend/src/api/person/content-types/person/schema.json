@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "people",
+  "info": {
+    "singularName": "person",
+    "pluralName": "people",
+    "displayName": "Person"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "PersonID": {
+      "type": "uid"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Experience": {
+      "type": "integer"
+    },
+    "point_discoveries": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::point-discovery.point-discovery",
+      "mappedBy": "person"
+    }
+  }
+}
