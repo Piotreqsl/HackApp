@@ -7,6 +7,8 @@ import { useTheme } from '../../hooks';
 import { useLazyFetchOneQuery } from '../../services/modules/users';
 import { changeTheme } from '../../store/theme';
 import i18next from 'i18next';
+
+//test czy dziala
 const Example = () => {
     const { t } = useTranslation(['example', 'welcome']);
     const { Common, Fonts, Gutters, Layout, Images, darkMode: isDark, } = useTheme();
